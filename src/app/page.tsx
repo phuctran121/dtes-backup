@@ -17,13 +17,15 @@ export default function HomePage() {
     <div className="relative w-full">
       <div className="relative w-full min-h-screen">
         <div className="absolute inset-0 z-0">
-          {/* <Image
+          <Image
             src="/assets/home/landing-bg.png"
             alt="Landing background"
             priority
             fill
             className="object-cover object-top"
-          /> */}
+            placeholder="blur"
+            blurDataURL="/assets/home/landing-bg-blur.png"
+          />
         </div>
 
         <div className="relative z-10 flex flex-col">
