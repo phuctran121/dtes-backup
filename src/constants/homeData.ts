@@ -4,35 +4,35 @@ export const whyCardsData: WhyCard[] = [
   {
     title: "디지털 트윈 기반",
     description: "실제 설계도 반영",
-    image: "/assets/icons/Task.png",
+    image: "/assets/icons/task.svg",
   },
   {
     title: "태양광/단열 조건 비교",
     description: "즉시 효율 계산",
-    image: "/assets/home/Rocket.jpg",
+    image: "/assets/icons/rocket.svg",
   },
   {
     title: "실시간 시뮬레이션",
     description: "다양한 조건 설정",
-    image: "/assets/home/Building.jpg",
+    image: "/assets/icons/building.svg",
   },
   {
     title: "UI 직관성",
     description: "누구나 사용 가능",
-    image: "/assets/home/Computer.jpg",
+    image: "/assets/icons/computer.svg",
   },
 ];
 
 export const iscCardsData: InternationalStandardCard[] = [
   {
-    image: "/assets/home/Star.png",
+    image: "/assets/icons/star.svg",
     title: "ISO 13790",
     content: ["건물 에너지 요구량 계산 기준", "유럽 표준", "DTES 평가 기반"],
-    bg: "bg-card-3 text-white",
-    arrowColor: "text-white",
+    bg: "bg-white border border-card-3",
+    arrowColor: "text-card-inst-text",
   },
   {
-    image: "/assets/home/Star_label.jpg",
+    image: "/assets/icons/star_label.svg",
     title: "DIN V 18599",
     content: [
       "독일 DIN 기준",
@@ -43,7 +43,7 @@ export const iscCardsData: InternationalStandardCard[] = [
     arrowColor: "text-card-inst-text",
   },
   {
-    image: "/assets/home/Energy.jpg",
+    image: "/assets/icons/energy.svg",
     title: "IEA · UNEP 기준",
     content: [
       "국제기후기구 협약",
@@ -59,7 +59,7 @@ export const packagesCardsData = [
   {
     title: "DTES Free",
     subtitle: "학생\n설계사",
-    image: "/assets/home/card_personal.jpg",
+    image: "/assets/icons/card_personal.svg",
     mainText: "기본 시뮬레이션 기능\n누구나 사용, 무료",
     desc: "학습용, 포트폴리오 기반 활용",
     note: "→ FREE 버전으로 접근 장벽 낮춤",
@@ -69,7 +69,7 @@ export const packagesCardsData = [
   {
     title: "DTES BuildKit",
     subtitle: "대형건설사\n플랫폼",
-    image: "/assets/home/card_group.jpg",
+    image: "/assets/icons/card_group.svg",
     mainText: "설계도면 연동 API\n대규모 설계 시스템 연동",
     desc: "빠르고 직관적인 시뮬레이션 도구",
     note: "→ BuildKit/API로 B2B 확장",
@@ -79,7 +79,7 @@ export const packagesCardsData = [
   {
     title: "DTES Free",
     subtitle: "시공사",
-    image: "/assets/home/card_working.jpg",
+    image: "/assets/icons/card_working.svg",
     mainText: "에너지 절감 예측, 등급 인증 대응\n고급 분석, 리포트 생성",
     desc: "에너지효율등급 대응, 보고서 생성",
     note: "→ Pro로 인증·분석·리포트 수요 확보",
@@ -89,7 +89,7 @@ export const packagesCardsData = [
   {
     title: "DTES Insights",
     subtitle: "에너지 컨설턴트\n정부",
-    image: "/assets/home/card_co-operate.jpg",
+    image: "/assets/icons/card_co-operate.svg",
     mainText: "보고서 자동 생성, 분석 통계\n정책/연구 기반 활용",
     desc: "정책/지침 대응용 데이터 기반 분석",
     note: "→ 공공/정책/교육 기관 대응",
