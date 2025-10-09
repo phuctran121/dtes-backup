@@ -23,8 +23,10 @@ export default function HomePage() {
             priority
             fill
             className="object-cover object-top"
+            decoding="async"
             placeholder="blur"
             blurDataURL="/assets/home/landing-bg-blur.png"
+            loading="eager"
           />
         </div>
 

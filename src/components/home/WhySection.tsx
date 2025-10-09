@@ -39,6 +39,8 @@ export default function WhySection({ data }: WhySectionProps) {
                   alt={card.title}
                   width={80}
                   height={80}
+                  loading="lazy"
+                  decoding="async"
                   className="w-16 h-16 sm:w-20 sm:h-20 object-contain absolute bottom-4 right-4 sm:bottom-6 sm:right-6"
                 />
               </CardContent>

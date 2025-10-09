@@ -25,7 +25,8 @@ export default function InternationalStandardsSection({
           {data.map((card, index) => (
             <Card
               key={index}
-              className={`relative p-6 sm:p-8 min-h-[480px] flex flex-col justify-between rounded-2xl transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg ${card.bg}`}
+              className={`group relative p-6 sm:p-8 min-h-[480px] flex flex-col justify-between rounded-2xl transition-all
+                duration-300 hover:bg-card-3 hover:scale-[1.02] hover:shadow-lg `}
             >
               {/* Header */}
               <CardHeader className="relative flex flex-row justify-between items-start px-0">
@@ -34,19 +35,19 @@ export default function InternationalStandardsSection({
                   alt="ISO Logo"
                   width={80}
                   height={80}
-                  className="object-contain w-20 h-20 sm:size-22 "
+                  loading="lazy"
+                  decoding="async"
+                  className="object-contain w-20 h-20 sm:size-22 transition-none group-hover:brightness-0 group-hover:invert"
                 />
                 <ArrowUpRight
-                  className={`absolute -top-4 -right-2 size-16 lg:size-20 ${card.arrowColor}`}
+                  className={`absolute -top-4 -right-2 size-16 lg:size-20 transition-all duration-300 text-card-inst-text group-hover:text-white`}
                 />
               </CardHeader>
 
               {/* Content */}
               <CardContent className="px-0">
                 <CardTitle
-                  className={`text-2xl sm:text-4xl font-bold mb-4 ${
-                    index === 0 ? "text-white" : "text-card-inst-text"
-                  }`}
+                  className={`text-2xl sm:text-4xl font-bold mb-4 transition-all duration-300 text-card-inst-text group-hover:text-white`}
                 >
                   {card.title}
                 </CardTitle>
@@ -55,9 +56,7 @@ export default function InternationalStandardsSection({
                   {card.content.map((item, i) => (
                     <li
                       key={i}
-                      className={
-                        index === 0 ? "text-white" : "text-card-inst-text"
-                      }
+                      className={`transition-all duration-300 text-card-inst-text group-hover:text-white`}
                     >
                       ・ {item}
                     </li>
