@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <div className="relative w-full">
       <div className="relative w-full min-h-screen">
-        <div className="absolute inset-0 z-0">
+        {/* <div className="absolute inset-0 z-0">
           <Image
             src="/assets/home/landing-bg.png"
             alt="Landing background"
@@ -28,7 +28,7 @@ export default function HomePage() {
             blurDataURL="/assets/home/landing-bg-blur.png"
             loading="eager"
           />
-        </div>
+        </div> */}
 
         <div className="relative z-10 flex flex-col">
           <HeroSection />

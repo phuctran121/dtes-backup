@@ -25,7 +25,7 @@ export default function InternationalStandardsSection({
           {data.map((card, index) => (
             <Card
               key={index}
-              className={`group relative p-6 sm:p-8 min-h-[480px] flex flex-col justify-between rounded-2xl transition-transform
+              className={`group relative p-6 sm:p-8 min-h-[480px] flex flex-col justify-between rounded-2xl transition-all
                 duration-300 hover:bg-card-3 hover:scale-[1.02] hover:shadow-lg `}
             >
               {/* Header */}
