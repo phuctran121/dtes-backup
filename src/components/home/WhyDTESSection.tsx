@@ -1,6 +1,6 @@
 import WhyDTESBox from "./WhyDTESBox";
-import WhyDTESMobile from "./WhyDTESMobile";
 import { WhyDTESBoxItem } from "@/types/home.types";
+import WhyDTESMobileWrapper from "./WhyDTESMobileWrapper";
 
 interface WhyDTESProps {
   data: WhyDTESBoxItem[];
@@ -57,7 +57,7 @@ export default function WhyDTES({ data }: WhyDTESProps) {
         </div>
 
         {/* Mobile layout */}
-        <WhyDTESMobile boxes={data} />
+        <WhyDTESMobileWrapper boxes={data} />
       </div>
     </section>
   );

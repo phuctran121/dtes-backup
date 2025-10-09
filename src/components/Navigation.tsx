@@ -47,14 +47,18 @@ export default function Navigation() {
             className="flex justify-between items-center h-20"
           >
             {/* Logo */}
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center gap-2">
               <Image
-                src="/assets/home/DTEs.jpg"
+                src="/assets/icons/DTES_Logo.svg"
                 alt="DTES Logo"
-                width={isScrolled ? 48 : 64}
-                height={isScrolled ? 48 : 64}
+                width={64}
+                height={64}
+                loading="eager"
+                priority
                 draggable={false}
-                className="text-white logo rounded-full p-1 object-contain trasition-all duration-300"
+                className={`text-white logo  p-1 object-contain trasition-all duration-300 ${
+                  isScrolled ? "size-10" : "size-12"
+                }`}
               />
               <span
                 className={`font-semibold  text-white transition-all duration-300 ${

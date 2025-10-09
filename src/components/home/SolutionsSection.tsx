@@ -52,6 +52,8 @@ export default function SolutionPackagesSection({
                     width={80}
                     height={80}
                     className="w-20 h-20 sm:size-28 object-contain"
+                    priority={idx === 0}
+                    loading={idx === 0 ? "eager" : "lazy"}
                   />
                 </div>
 

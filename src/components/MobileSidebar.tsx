@@ -62,6 +62,8 @@ export default function MobileSidebar({
                   alt="DTES Logo"
                   width={48}
                   height={48}
+                  loading="lazy"
+                  decoding="async"
                   draggable={false}
                   className="text-white rounded-full p-1 object-contain trasition-all duration-300"
                 />

@@ -11,14 +11,16 @@ export default function Footer() {
           {/* Left Side */}
           <div className="lg:col-span-9 flex flex-col gap-6">
             {/* Logo */}
-            <div className="flex items-center justify-start -ml-[14px] select-none pointer-events-none">
+            <div className="flex items-center justify-start -ml-[6px] select-none pointer-events-none gap-2">
               <Image
-                src="/assets/home/DTEs.jpg"
+                src="/assets/icons/DTES_Logo.svg"
                 alt="DTES Logo"
                 draggable={false}
                 width={80}
                 height={80}
-                className="text-white logo rounded-full p-1 object-contain size-16"
+                loading="lazy"
+                decoding="async"
+                className="text-white p-1 object-contain size-11"
               />
               <span className="font-semibold text-2xl text-white">DTES</span>
             </div>
