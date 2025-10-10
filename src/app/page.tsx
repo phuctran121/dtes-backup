@@ -16,19 +16,19 @@ export default function HomePage() {
   return (
     <div className="relative w-full">
       <div className="relative w-full min-h-screen">
-        {/* <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0">
           <Image
-            src="/assets/home/landing-bg.png"
+            src="/assets/home/landing-bg.webp"
             alt="Landing background"
             priority
             fill
             className="object-cover object-top"
             decoding="async"
             placeholder="blur"
-            blurDataURL="/assets/home/landing-bg-blur.png"
+            blurDataURL="/assets/home/landing-bg-blur.webp"
             loading="eager"
           />
-        </div> */}
+        </div>
 
         <div className="relative z-10 flex flex-col">
           <HeroSection />
