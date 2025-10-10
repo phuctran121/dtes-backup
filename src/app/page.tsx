@@ -22,9 +22,9 @@ export default function HomePage() {
             alt="Landing background"
             fill
             priority
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 100vw"
             className="object-cover object-top"
-            quality={70}
+            quality={60}
             decoding="async"
             loading="eager"
           />
