@@ -20,8 +20,9 @@ export default function HomePage() {
           <Image
             src="/assets/home/landing-bg.webp"
             alt="Landing background"
-            priority
             fill
+            priority
+            sizes="100vw"
             className="object-cover object-top"
             decoding="async"
             placeholder="blur"

@@ -19,7 +19,7 @@ const pretendard = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DTES",
+  title: "DTES - Backup",
   description:
     "DTES는 건축 설계 및 시공 전, 실시간 에너지 시뮬레이션을 통해 에너지 낭비를 줄이고 성능을 최적화할 수 있게 돕습니다.",
   keywords: ["디지털 트윈", "에너지 시뮬레이션", "건축 설계", "에너지 효율"],
