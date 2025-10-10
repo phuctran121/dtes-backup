@@ -30,14 +30,18 @@ export default function HomePage() {
             placeholder="blur"
             blurDataURL="/assets/home/landing-bg-blur.webp"
           /> */}
+          <h1 className="bg-red-400">ádasjasd</h1>
+          <h1 className="bg-red-400">ádasjasd</h1>
+          <h1 className="bg-red-400">ádasjasd</h1>
+          <h1 className="bg-red-400">ádasjasd</h1>
         </div>
 
         <div className="relative z-10 flex flex-col">
-          <HeroSection />
+          {/* <HeroSection />
           <WhyDTESSection data={whyBoxesData} />
           <WhySection data={whyCardsData} />
           <InternationalStandardsSection data={iscCardsData} />
-          <SolutionsSection data={packagesCardsData} />
+          <SolutionsSection data={packagesCardsData} /> */}
         </div>
       </div>
     </div>
