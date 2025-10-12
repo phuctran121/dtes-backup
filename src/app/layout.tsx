@@ -3,25 +3,19 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
-import { Poppins } from "next/font/google";
 
-// const pretendard = localFont({
-//   src: [
-//     {
-//       path: "../fonts/PretendardGOVVariable.woff2",
-//       style: "normal",
-//       weight: "45 920",
-//     },
-//   ],
-//   variable: "--font-pretendard",
-//   display: "swap",
-//   fallback: ["system-ui", "sans-serif"],
-//   preload: true,
-// });
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "400", "700", "900"],
+const pretendard = localFont({
+  src: [
+    {
+      path: "../fonts/PretendardGOVVariable.woff2",
+      style: "normal",
+      weight: "45 920",
+    },
+  ],
+  variable: "--font-pretendard",
+  display: "swap",
+  fallback: ["system-ui", "sans-serif"],
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -43,16 +37,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="kr">
-      <body
-        suppressHydrationWarning
-        className={`${poppins.className} antialiased`}
-      >
+      <body className={`${pretendard.className} antialiased`}>
         <div className="relative z-10">
           {/* <Navigation /> */}
           <div className="min-h-screen bg-transparent">
             <main className="mx-auto">{children}</main>
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </body>
     </html>
