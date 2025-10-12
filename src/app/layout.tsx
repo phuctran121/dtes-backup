@@ -2,22 +2,28 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
 
-const pretendard = localFont({
-  src: [
-    {
-      path: "../fonts/PretendardGOVVariable.woff2",
-      style: "normal",
-      weight: "45 920",
-    },
-  ],
-  variable: "--font-pretendard",
-  display: "swap",
-  fallback: ["system-ui", "sans-serif"],
-  preload: true,
+// const pretendard = localFont({
+//   src: [
+//     {
+//       path: "../fonts/PretendardGOVVariable.woff2",
+//       style: "normal",
+//       weight: "45 920",
+//     },
+//   ],
+//   variable: "--font-pretendard",
+//   display: "swap",
+//   fallback: ["system-ui", "sans-serif"],
+//   preload: true,
+// });
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  variable: "--font-roboto",
 });
-
 export const metadata: Metadata = {
   title: "DTES - Design To Energy Saving",
   description:
@@ -65,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="kr">
-      <body className={`${pretendard.className} antialiased`}>
+      <body className={`${roboto.variable} antialiased`}>
         <div className="relative z-10">
           <Navigation />
           <div className="min-h-screen bg-transparent">
