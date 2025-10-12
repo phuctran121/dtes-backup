@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="kr">
       <body className={`${pretendard.className} antialiased`}>
         <div className="relative z-10">
-          <Navigation />
+          {/* <Navigation /> */}
           <div className="min-h-screen bg-transparent">
             <main className="mx-auto">{children}</main>
           </div>
