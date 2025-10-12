@@ -1,9 +1,6 @@
 import Image from "next/image";
 import HeroSection from "@/components/home/HeroSection";
-import WhyDTESSection from "@/components/home/WhyDTESSection";
-import WhySection from "@/components/home/WhySection";
-import InternationalStandardsSection from "@/components/home/InternationalStandardsSection";
-import SolutionsSection from "@/components/home/SolutionsSection";
+import dynamic from "next/dynamic";
 
 import {
   whyCardsData,
@@ -11,6 +8,18 @@ import {
   packagesCardsData,
   whyBoxesData,
 } from "@/constants/homeData";
+
+// Dynamic imports for below-the-fold sections
+const WhyDTESSection = dynamic(
+  () => import("@/components/home/WhyDTESSection")
+);
+const WhySection = dynamic(() => import("@/components/home/WhySection"));
+const InternationalStandardsSection = dynamic(
+  () => import("@/components/home/InternationalStandardsSection")
+);
+const SolutionsSection = dynamic(
+  () => import("@/components/home/SolutionsSection")
+);
 
 export default function HomePage() {
   return (
