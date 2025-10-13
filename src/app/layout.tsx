@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-// import localFont from "next/font/local";
-import { pretendardFont } from "@croco/utils-next-font-pretendard";
+import localFont from "next/font/local";
+// import { pretendardFont } from "@croco/utils-next-font-pretendard";
 
 // const roboto = Roboto({
 //   subsets: ["latin"],
@@ -51,14 +51,36 @@ export const metadata: Metadata = {
   // },
 };
 
+export const pretendard = localFont({
+  src: [
+    {
+      path: "../fonts/Pretendard-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Pretendard-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Pretendard-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  variable: "--font-pretendard",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="kr" className={pretendardFont.className}>
-      <body className="antialiased">
+    <html lang="kr">
+      <body className={`${pretendard.className}  antialiased `}>
         <div className="relative z-10">
           <Navigation />
           <div className="min-h-screen bg-transparent">
