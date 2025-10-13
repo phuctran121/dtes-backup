@@ -7,9 +7,9 @@ import localFont from "next/font/local";
 const pretendard = localFont({
   src: [
     {
-      path: "../fonts/PretendardVariable.woff2",
+      path: "../fonts/PretendardVariable.woff2", // ✅ dùng file subset
       style: "normal",
-      weight: "45 920",
+      weight: "400 700", // ✅ chỉ giữ khoảng cần thiết
     },
   ],
   variable: "--font-pretendard",
@@ -26,25 +26,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DTES - Design To Energy Saving",
     description: "건축 전에, 성능을 예측하세요",
-    // images: ["/assets/home/DTEs.jpg"],
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="kr"
-      className={`${pretendard.variable}`}
-      suppressHydrationWarning
-    >
-      <body
-        suppressHydrationWarning
-        className={`${pretendard.className} antialiased`}
-      >
+    <html lang="ko">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/PretendardVariableSubset.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body className={`${pretendard.className} antialiased `}>
         <div className="relative z-10">
           <Navigation />
           <div className="min-h-screen bg-transparent">
