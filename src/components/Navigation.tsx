@@ -1,12 +1,16 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import HamburgerButton from "@/components/HamburgerButton";
 import Image from "next/image";
 import { useEffect } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import MobileSidebar from "@/components/MobileSidebar";
+const MobileSidebar = dynamic(() => import("@/components/MobileSidebar"), {
+  ssr: false,
+  loading: () => null,
+});
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,6 +18,20 @@ export default function Navigation() {
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navStyle = useMemo(
+    () => ({
+      backgroundColor: isScrolled ? "rgba(0,5,77,0.4)" : "rgba(0,0,0,0)",
+      backdropFilter: isScrolled ? "blur(10px)" : "blur(0px)",
+    }),
+    [isScrolled]
+  );
   const menuItems = [
     { name: "DTSE란?", href: "/" },
     { name: "지금 왜", href: "/about" },
@@ -21,28 +39,10 @@ export default function Navigation() {
     { name: "영향력과 그 이상", href: "/" },
   ];
 
-  useEffect(() => {
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setIsScrolled(window.scrollY > 10);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <>
       <motion.nav
-        animate={{
-          backgroundColor: isScrolled ? "rgba(0,5,77,0.4)" : "rgba(0,0,0,0)",
-          backdropFilter: isScrolled ? "blur(10px)" : "blur(0px)",
-        }}
+        animate={navStyle}
         transition={{ duration: 0.4, ease: "easeInOut" }}
         className="fixed top-0 left-0 right-0 z-40 bg-none h-fit "
       >
@@ -60,8 +60,8 @@ export default function Navigation() {
                 alt="DTES Logo"
                 width={64}
                 height={64}
-                loading="eager"
-                priority
+                loading="lazy"
+                decoding="async"
                 draggable={false}
                 className={`text-white logo  p-1 object-contain trasition-all duration-300 ${
                   isScrolled ? "size-10" : "size-12"

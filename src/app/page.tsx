@@ -32,7 +32,7 @@ export default function HomePage() {
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 100vw"
             className="object-cover object-top"
-            quality={85}
+            quality={75}
             priority={true}
             placeholder="blur"
             blurDataURL="/assets/home/landing-bg-blur.webp"

@@ -3,28 +3,14 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 // import localFont from "next/font/local";
-import { Roboto } from "next/font/google";
+import { pretendardFont } from "@croco/utils-next-font-pretendard";
 
-// const pretendard = localFont({
-//   src: [
-//     {
-//       path: "../fonts/PretendardGOVVariable.woff2",
-//       style: "normal",
-//       weight: "45 920",
-//     },
-//   ],
-//   variable: "--font-pretendard",
-//   display: "swap",
-//   fallback: ["system-ui", "sans-serif"],
-//   preload: true,
+// const roboto = Roboto({
+//   subsets: ["latin"],
+//   weight: ["100", "300", "400", "500", "700", "900"],
+//   variable: "--font-roboto",
+//   fallback: ["system-ui", "arial"],
 // });
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-  variable: "--font-roboto",
-  fallback: ["system-ui", "arial"],
-});
 export const metadata: Metadata = {
   title: "DTES - Design To Energy Saving",
   description:
@@ -71,8 +57,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="kr">
-      <body className={`${roboto.variable} antialiased`}>
+    <html lang="kr" className={pretendardFont.className}>
+      <body className="antialiased">
         <div className="relative z-10">
           <Navigation />
           <div className="min-h-screen bg-transparent">
