@@ -39,7 +39,7 @@ export default function RootLayout({
       <head>
         <link
           rel="preload"
-          href="/fonts/PretendardVariableSubset.woff2"
+          href="/fonts/PretendardVariable.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
