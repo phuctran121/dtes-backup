@@ -23,6 +23,7 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
   variable: "--font-roboto",
+  fallback: ["system-ui", "arial"],
 });
 export const metadata: Metadata = {
   title: "DTES - Design To Energy Saving",
