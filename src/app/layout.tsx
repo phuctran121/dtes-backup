@@ -2,17 +2,28 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import localFont from "next/font/local";
+import { Noto_Sans_KR } from "next/font/google";
 
-const pretendard = localFont({
-  src: [
-    {
-      path: "../fonts/PretendardVariable.woff2", // ✅ dùng file subset
-      style: "normal",
-      weight: "400 700", // ✅ chỉ giữ khoảng cần thiết
-    },
-  ],
-  variable: "--font-pretendard",
+// import localFont from "next/font/local";
+
+// const pretendard = localFont({
+//   src: [
+//     {
+//       path: "../fonts/PretendardVariable.woff2", // ✅ dùng file subset
+//       style: "normal",
+//       weight: "400 700", // ✅ chỉ giữ khoảng cần thiết
+//     },
+//   ],
+//   variable: "--font-pretendard",
+//   display: "swap",
+//   fallback: ["system-ui", "sans-serif"],
+//   preload: true,
+// });
+
+const notoSansKr = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  variable: "--font-noto-sans-kr",
   display: "swap",
   fallback: ["system-ui", "sans-serif"],
   preload: true,
@@ -36,16 +47,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/PretendardVariable.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body className={`${pretendard.className} antialiased `}>
+      <body className={`${notoSansKr.className} antialiased `}>
         <div className="relative z-10">
           <Navigation />
           <div className="min-h-screen bg-transparent">
