@@ -1,5 +1,3 @@
-// "use client";
-
 import Image from "next/image";
 import { BookOpen, Download } from "lucide-react";
 

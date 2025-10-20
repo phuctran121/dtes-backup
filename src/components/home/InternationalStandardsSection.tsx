@@ -1,7 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
 import { InternationalStandardCard } from "@/types/home.types";
+import InternationalStandardCardItem from "@/components/InternationalStandardCardItem";
 
 interface InternationalStandardsSectionProps {
   data: InternationalStandardCard[];
@@ -23,47 +21,7 @@ export default function InternationalStandardsSection({
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {data.map((card, index) => (
-            <Card
-              key={index}
-              className={`group relative p-6 sm:p-8 min-h-[480px] flex flex-col justify-between rounded-2xl transition-all
-                duration-300 hover:bg-card-3 hover:scale-[1.02] hover:shadow-lg `}
-            >
-              {/* Header */}
-              <CardHeader className="relative flex flex-row justify-between items-start px-0">
-                <Image
-                  src={card.image}
-                  alt="ISO Logo"
-                  width={80}
-                  height={80}
-                  loading="lazy"
-                  decoding="async"
-                  className="object-contain w-20 h-20 sm:size-22 transition-none group-hover:brightness-0 group-hover:invert"
-                />
-                <ArrowUpRight
-                  className={`absolute -top-4 -right-2 size-16 lg:size-20 transition-all duration-300 text-card-inst-text group-hover:text-white`}
-                />
-              </CardHeader>
-
-              {/* Content */}
-              <CardContent className="px-0">
-                <CardTitle
-                  className={`text-2xl sm:text-4xl font-bold mb-4 transition-all duration-300 text-card-inst-text group-hover:text-white`}
-                >
-                  {card.title}
-                </CardTitle>
-
-                <ul className="space-y-2 text-sm sm:text-base font-semibold leading-relaxed">
-                  {card.content.map((item, i) => (
-                    <li
-                      key={i}
-                      className={`transition-all duration-300 text-card-inst-text group-hover:text-white`}
-                    >
-                      ・ {item}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+            <InternationalStandardCardItem key={index} card={card} />
           ))}
         </div>
       </div>

@@ -1,6 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
 import { WhyCard } from "@/types/home.types";
+import WhyCardItem from "@/components/WhyCardItem";
 
 interface WhySectionProps {
   data: WhyCard[];
@@ -13,6 +12,7 @@ export default function WhySection({ data }: WhySectionProps) {
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6">
           왜 <span className="text-text-highlight">DTES</span>인가요?
         </h2>
+
         <p className="text-title-black text-sm sm:text-base md:text-lg max-w-2xl font-normal mx-auto mb-12 sm:mb-20 leading-relaxed">
           DTES는 건축 설계 및 시공 전, 실시간 에너지 시뮬레이션을 통해{" "}
           <br className="hidden sm:block" />
@@ -21,30 +21,7 @@ export default function WhySection({ data }: WhySectionProps) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 justify-center">
           {data.map((card, index) => (
-            <Card
-              key={index}
-              className="rounded-2xl border-0 shadow-[0_2px_10px_rgba(0,0,0,0.05)] bg-white relative hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] transition-shadow duration-300"
-            >
-              <CardContent className="flex flex-col items-start justify-between h-56 sm:h-64 lg:h-72 p-5 sm:p-6 text-left relative">
-                <div className="flex flex-col gap-1 sm:gap-2">
-                  <h3 className="text-2xl sm:text-3xl font-semibold mb-1">
-                    {card.title}
-                  </h3>
-                  <p className="text-sub-title font-semibold text-sm sm:text-xl">
-                    {card.description}
-                  </p>
-                </div>
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  width={80}
-                  height={80}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-16 h-16 sm:w-20 sm:h-20 object-contain absolute bottom-4 right-4 sm:bottom-6 sm:right-6"
-                />
-              </CardContent>
-            </Card>
+            <WhyCardItem key={index} card={card} />
           ))}
         </div>
 

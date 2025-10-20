@@ -1,10 +1,16 @@
-import WhyDTESBox from "./WhyDTESBox";
+"use client";
+import WhyDTESBox from "../WhyDTESCardItem";
 import { WhyDTESBoxItem } from "@/types/home.types";
-import WhyDTESMobileWrapper from "./WhyDTESMobileWrapper";
+import dynamic from "next/dynamic";
 
 interface WhyDTESProps {
   data: WhyDTESBoxItem[];
 }
+
+const WhyDTESMobile = dynamic(() => import("./WhyDTESMobile"), {
+  ssr: false,
+  loading: () => null,
+});
 
 export default function WhyDTES({ data }: WhyDTESProps) {
   return (
@@ -57,7 +63,7 @@ export default function WhyDTES({ data }: WhyDTESProps) {
         </div>
 
         {/* Mobile layout */}
-        <WhyDTESMobileWrapper boxes={data} />
+        <WhyDTESMobile boxes={data} />
       </div>
     </section>
   );

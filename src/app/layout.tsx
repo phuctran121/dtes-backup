@@ -3,15 +3,14 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Noto_Sans_KR } from "next/font/google";
-
 // import localFont from "next/font/local";
 
 // const pretendard = localFont({
 //   src: [
 //     {
-//       path: "../fonts/PretendardVariable.woff2", // ✅ dùng file subset
+//       path: "../fonts/PretendardVariable.woff2",
 //       style: "normal",
-//       weight: "400 700", // ✅ chỉ giữ khoảng cần thiết
+//       weight: "45 920",
 //     },
 //   ],
 //   variable: "--font-pretendard",
@@ -37,17 +36,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DTES - Design To Energy Saving",
     description: "건축 전에, 성능을 예측하세요",
+    // images: ["/assets/home/DTEs.jpg"],
   },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="ko">
-      <body className={`${notoSansKr.className} antialiased `}>
+      <body className={`${notoSansKr.className} antialiased`}>
         <div className="relative z-10">
           <Navigation />
           <div className="min-h-screen bg-transparent">
