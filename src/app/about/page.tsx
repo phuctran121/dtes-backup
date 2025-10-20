@@ -7,6 +7,7 @@ export default function page() {
   return (
     <div>
       {/* <ESGFlowSlider /> */}
+      <h1 className="text-red-400">asdasdasdkasjdaslkdjaslkdja</h1>
       <ESGResultSection data={resultsData} />
     </div>
   );
