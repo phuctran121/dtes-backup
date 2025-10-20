@@ -6,7 +6,7 @@ export default function ESGHeaderSection() {
         className="
           bg-center bg-cover
           bg-no-repeat
-          bg-[url('/assets/esg/esg-header-background-mb.png')]
+          bg-[url('/assets/esg/esg-header-background-mb.webp')]
           md:bg-[url('/assets/esg/esg-header-background.webp')]
         "
       >
