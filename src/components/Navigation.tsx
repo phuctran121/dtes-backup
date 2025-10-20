@@ -27,19 +27,32 @@ export default function Navigation() {
     [isScrolled]
   );
 
-  const menuItems = [
-    { name: "DTSE란?", href: "/" },
-    { name: "지금 왜", href: "/about" },
-    { name: "우리의 솔루션", href: "/esgsolution" },
-    { name: "영향력과 그 이상", href: "/" },
-  ];
-
+  // Throttle scroll for better performance
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 10);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const menuItems = useMemo(
+    () => [
+      { name: "DTSE란?", href: "/" },
+      { name: "지금 왜", href: "/about" },
+      { name: "우리의 솔루션", href: "/esgsolution" },
+      { name: "영향력과 그 이상", href: "/" },
+    ],
+    []
+  );
 
   return (
     <>
