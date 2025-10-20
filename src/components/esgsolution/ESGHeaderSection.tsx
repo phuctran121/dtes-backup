@@ -17,7 +17,7 @@ export default function ESGHeaderSection() {
             <h1 className="text-5xl md:text-7xl text-white font-medium leading-relaxed mb-4">
               ESG SOLUTION
             </h1>
-            <p className="text-base md:text-lg tracking-tight font-light text-gray-200">
+            <p className="text-base md:text-lg tracking-tight font-light text-black">
               데이터를 기반으로 ESG를 실행하고, 투명하게 관리합니다.
             </p>
           </div>
