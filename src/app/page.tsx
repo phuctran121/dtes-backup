@@ -37,7 +37,7 @@ export default function HomePage() {
 
         <div className="relative z-10 flex flex-col">
           <HeroSection />
-          {/* <WhyDTESSection data={whyBoxesData} /> */}
+          <WhyDTESSection data={whyBoxesData} />
           <WhySection data={whyCardsData} />
           <InternationalStandardsSection data={iscCardsData} />
           <SolutionPackagesSection data={packagesCardsData} />
