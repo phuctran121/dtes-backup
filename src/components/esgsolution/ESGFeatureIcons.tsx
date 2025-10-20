@@ -3,27 +3,27 @@ import Image from "next/image";
 const features = [
   {
     id: 1,
-    icon: "/assets/esg/icon-esg-1.svg",
+    icon: "/assets/icons/rocket.svg",
     title: "01. ESG 통합관리",
   },
   {
     id: 2,
-    icon: "/assets/esg/icon-esg-2.svg",
+    icon: "/assets/icons/rocket.svg",
     title: "02. 탄소배출 자동산정",
   },
   {
     id: 3,
-    icon: "/assets/esg/icon-esg-3.svg",
+    icon: "/assets/icons/rocket.svg",
     title: "03. 리포팅 자동화",
   },
   {
     id: 4,
-    icon: "/assets/esg/icon-esg-4.svg",
+    icon: "/assets/icons/rocket.svg",
     title: "04. 리스크 진단",
   },
   {
     id: 5,
-    icon: "/assets/esg/icon-esg-5.svg",
+    icon: "/assets/icons/rocket.svg",
     title: "05. 공급망 ESG 관리",
   },
 ];
