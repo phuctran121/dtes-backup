@@ -49,11 +49,11 @@ export default function RootLayout({
     <html lang="ko">
       <body className={`${notoSansKr.className} antialiased`}>
         <div className="relative z-10">
-          <Navigation />
+          {/* <Navigation /> */}
           <div className="min-h-screen bg-transparent">
             <main className="mx-auto">{children}</main>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>
