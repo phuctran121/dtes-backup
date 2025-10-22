@@ -3,6 +3,8 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Noto_Sans_KR } from "next/font/google";
+import NextTopLoader from "nextjs-toploader";
+
 // import localFont from "next/font/local";
 
 // const pretendard = localFont({
@@ -49,6 +51,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={`${notoSansKr.className} antialiased`}>
         <div className="relative z-10">
+          <NextTopLoader />
           <Navigation />
           <div className="min-h-screen bg-transparent">
             <main className="mx-auto">{children}</main>
