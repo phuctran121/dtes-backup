@@ -1,11 +1,13 @@
 "use client";
-
 import React, { memo, useMemo } from "react";
-import dynamic from "next/dynamic";
 import WhyDTESBox from "../WhyDTESCardItem";
 import { WhyDTESBoxItem } from "@/types/home.types";
+import dynamic from "next/dynamic";
 
-// Lazy-load mobile version with skeleton
+interface WhyDTESProps {
+  data: WhyDTESBoxItem[];
+}
+
 const WhyDTESMobile = dynamic(() => import("./WhyDTESMobile"), {
   ssr: false,
   loading: () => (
@@ -15,59 +17,55 @@ const WhyDTESMobile = dynamic(() => import("./WhyDTESMobile"), {
   ),
 });
 
-interface WhyDTESProps {
-  data: WhyDTESBoxItem[];
-}
-
 function WhyDTES({ data }: WhyDTESProps) {
   const [left, mid, right] = useMemo(
     () => [data.slice(0, 2), data.slice(2, 4), data.slice(4, 6)],
     [data]
   );
-
   return (
-    <section
-      className="w-full min-h-[80vh] py-16 md:py-24 bg-transparent overflow-hidden"
-      id="why-dtes"
-    >
-      <div className="container mx-auto px-4 sm:px-8 lg:px-16 text-center">
-        {/* Title */}
-        <header className="mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-title-white mb-8 leading-tight">
+    <section className="w-full min-h-screen py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-16 text-center ">
+        {/* Above Content */}
+        <div className="mb-16 w-full">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-title-white mb-8">
             건축 전에, 성능을 예측하세요
           </h2>
-          <p className="text-title-white text-2xl md:text-4xl max-w-[1050px] mx-auto leading-relaxed">
+          <p className="text-title-white text-2xl md:text-4xl w-full mx-auto leading-relaxed max-w-[1050px]">
             DTES는 건축 설계 및 시공 전, 실시간 에너지 시뮬레이션을 통해 에너지
             낭비를 줄이고 성능을 최적화할 수 있게 돕습니다.
           </p>
-        </header>
-
-        {/* Divider line */}
-        <div className="relative flex justify-center mb-16">
-          <div className="h-28 w-[1px] bg-white/60 rounded-full hidden lg:block"></div>
         </div>
 
-        {/* Subheading */}
-        <h3 className="text-5xl font-extrabold mb-16 text-title-white hidden lg:block">
+        {/* Vertical Bar */}
+        <div className="relative flex justify-center mb-16">
+          <div className="h-28 w-[1px] bg-white rounded-full hidden lg:block"></div>
+        </div>
+
+        <h2 className="text-5xl font-extrabold mb-16 text-title-white hidden lg:block">
           왜 DTES가 필요할까요?
-        </h3>
+        </h2>
 
-        {/* Desktop layout */}
-        <div className="hidden lg:grid grid-cols-3 gap-6 items-start">
+        {/* Desktop Grid */}
+        <div className="hidden lg:grid grid-cols-3 gap-6 items-center">
+          {/* Column Left */}
           <div className="flex flex-col justify-center gap-6 mb-32">
-            {left.map((b, i) => (
+            {data.slice(0, 2).map((b, i) => (
               <WhyDTESBox key={i} title={b.title} text={b.text} />
             ))}
           </div>
 
+          {/* Column Mid */}
           <div className="flex flex-col items-center gap-6">
-            {mid.map((b, i) => (
-              <WhyDTESBox key={i} title={b.title} text={b.text} />
+            {data.slice(2, 4).map((b, i) => (
+              <div key={i} className="w-full">
+                <WhyDTESBox title={b.title} text={b.text} />
+              </div>
             ))}
           </div>
 
-          <div className="flex flex-col justify-center gap-6 mb-32">
-            {right.map((b, i) => (
+          {/* Column Right */}
+          <div className="flex flex-col justify-center gap-8 mb-32">
+            {data.slice(4, 6).map((b, i) => (
               <WhyDTESBox key={i} title={b.title} text={b.text} />
             ))}
           </div>

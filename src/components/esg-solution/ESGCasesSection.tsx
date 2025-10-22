@@ -28,7 +28,7 @@ export default function ESGCasesSection({
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16">
           {data.map((card, index) => (
             <InternationalStandardCardItem key={index} card={card} />
           ))}

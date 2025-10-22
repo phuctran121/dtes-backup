@@ -6,6 +6,7 @@ import HamburgerButton from "@/components/HamburgerButton";
 import Image from "next/image";
 import { useEffect } from "react";
 import Link from "next/link";
+import { Suspense } from "react";
 
 import dynamic from "next/dynamic";
 const MobileSidebar = dynamic(() => import("@/components/MobileSidebar"), {
@@ -27,7 +28,7 @@ export default function Navigation() {
     [isScrolled]
   );
 
-  // Throttle scroll for better performance
+  // Throttle scroll
   useEffect(() => {
     let ticking = false;
     const handleScroll = () => {
@@ -48,8 +49,8 @@ export default function Navigation() {
     () => [
       { name: "DTSE란?", href: "/" },
       { name: "지금 왜", href: "/about" },
-      { name: "우리의 솔루션", href: "/esgsolution" },
-      { name: "영향력과 그 이상", href: "/" },
+      { name: "우리의 솔루션", href: "/esg-solution" },
+      { name: "영향력과 그 이상", href: "/ai-ontology-platform" },
     ],
     []
   );
@@ -133,11 +134,15 @@ export default function Navigation() {
         </div>
       </motion.nav>
 
-      <MobileSidebar
-        isMenuOpen={isMenuOpen}
-        onClose={closeMenu}
-        menuItems={menuItems}
-      />
+      {isMenuOpen && (
+        <Suspense fallback={null}>
+          <MobileSidebar
+            isMenuOpen={isMenuOpen}
+            onClose={closeMenu}
+            menuItems={menuItems}
+          />
+        </Suspense>
+      )}
 
       <motion.div
         animate={{

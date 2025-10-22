@@ -1,13 +1,13 @@
 import React from "react";
-// import ESGFlowSlider from "@/components/esgsolution/ESGFlowSlider";
-import ESGResultSection from "@/components/esgsolution/ESGResultSection";
-import { casesData, resultsData } from "@/constants/esgSolutionData";
+import ESGResultSection from "@/components/esg-solution/ESGResultSection";
+import { resultsData } from "@/constants/esgSolutionData";
+import ESGFlowSection from "@/components/esg-solution/ESGFlowSection";
 
 export default function page() {
   return (
     <div>
-      {/* <ESGFlowSlider /> */}
-      <h1 className="text-red-400">asdasdasdkasjdaslkdjaslkdja</h1>
+      {/* <ESGFlowSection /> */}
+      <div className="min-h-[100px] bg-blue-900"></div>
       <ESGResultSection data={resultsData} />
     </div>
   );

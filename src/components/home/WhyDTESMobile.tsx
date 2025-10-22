@@ -1,24 +1,24 @@
 "use client";
-
-import React, { memo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import "swiper/css/bundle";
+import "swiper/css";
+import "swiper/css/pagination";
 import WhyDTESBox from "../WhyDTESCardItem";
 
-interface WhyDTESMobileProps {
+export default function WhyDTESMobile({
+  boxes,
+}: {
   boxes: { title: string; text: string }[];
-}
-
-function WhyDTESMobile({ boxes }: WhyDTESMobileProps) {
+}) {
   return (
-    <div className="lg:hidden w-full select-none">
+    <div className="lg:hidden">
       <Swiper
         modules={[Pagination]}
         pagination={{ clickable: true }}
         spaceBetween={24}
         slidesPerView={1}
-        className="pb-10 custom-swiper will-change-transform"
+        initialSlide={2}
+        className="pb-10 custom-swiper"
       >
         {boxes.map((b, i) => (
           <SwiperSlide key={i}>
@@ -31,5 +31,3 @@ function WhyDTESMobile({ boxes }: WhyDTESMobileProps) {
     </div>
   );
 }
-
-export default memo(WhyDTESMobile);

@@ -3,27 +3,27 @@ import Image from "next/image";
 const features = [
   {
     id: 1,
-    icon: "/assets/icons/rocket.svg",
+    icon: "/assets/icons/three-connector.svg",
     title: "01. ESG 통합관리",
   },
   {
     id: 2,
-    icon: "/assets/icons/rocket.svg",
+    icon: "/assets/icons/co2.svg",
     title: "02. 탄소배출 자동산정",
   },
   {
     id: 3,
-    icon: "/assets/icons/rocket.svg",
+    icon: "/assets/icons/e-task.svg",
     title: "03. 리포팅 자동화",
   },
   {
     id: 4,
-    icon: "/assets/icons/rocket.svg",
+    icon: "/assets/icons/setting-warn.svg",
     title: "04. 리스크 진단",
   },
   {
     id: 5,
-    icon: "/assets/icons/rocket.svg",
+    icon: "/assets/icons/eco-circle.svg",
     title: "05. 공급망 ESG 관리",
   },
 ];
@@ -42,7 +42,7 @@ export default function ESGFeatureIcons() {
               alt={item.title}
               width={48}
               height={48}
-              className="w-10 h-10 sm:w-12 sm:h-12"
+              className="size-20 md:size-40 lg:size-60"
             />
           </div>
           <p className="text-xs md:text-xl lg:text-2xl font-bold text-gray-800">

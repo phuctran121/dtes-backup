@@ -19,7 +19,7 @@ export default function WhySection({ data }: WhySectionProps) {
           에너지 낭비를 줄이고 성능을 최적화할 수 있게 돕습니다.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 justify-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-center">
           {data.map((card, index) => (
             <WhyCardItem key={index} card={card} />
           ))}
