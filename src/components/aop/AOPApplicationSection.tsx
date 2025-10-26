@@ -25,10 +25,10 @@ export default function ApplicationSection() {
 
   return (
     <section
-      className="w-full min-h-screen py-16 md:py-24 bg-[url('/assets/aop/aop-application-background.webp')] 
+      className="w-full py-16 md:py-24 bg-[url('/assets/aop/aop-application-background.webp')] 
       bg-cover bg-center bg-no-repeat"
     >
-      <div className="container mx-auto px-4 sm:px-0 flex flex-col items-center justify-start py-24">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-46 flex flex-col items-center justify-start py-16">
         <h2 className="text-2xl md:text-4xl font-bold text-text-esg-title mb-14">
           APPLICATION
         </h2>
@@ -42,16 +42,16 @@ export default function ApplicationSection() {
               <div
                 key={idx}
                 className={`relative w-full flex justify-center
-                   ${isMiddle ? "lg:mt-[60%]" : "lg:mt-0"}`}
+                   ${isMiddle ? "lg:mt-[80%]" : "lg:mt-0"}`}
               >
                 {/* outer rounded frame */}
-                <div className="w-full  md:max-w-none border-1 border-[#429BFF] rounded-[28px] p-6">
+                <div className="w-full md:max-w-none border-1 border-[#429BFF] rounded-[28px] p-5">
                   {/* inner card */}
-                  <div className="bg-[#90C4FF] rounded-[18px] py-10 px-6 text-center text-white min-h-[180px] flex flex-col justify-center gap-10 md:gap-24">
-                    <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold">
+                  <div className="bg-[#90C4FF] rounded-[18px] py-6 px-4 text-center text-white min-h-[180px] gap-8 md:gap-14 flex flex-col justify-center">
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-medium tracking-tighter">
                       {it.title}
                     </h3>
-                    <p className="text-sm md:text-base lg:text-lg leading-relaxed opacity-90">
+                    <p className="text-sm md:text-base lg:text-lg leading-relaxed tracking-tighter opacity-90">
                       {it.desc}
                     </p>
                   </div>

@@ -30,6 +30,7 @@ export const iscCardsData: InternationalStandardCard[] = [
     content: ["건물 에너지 요구량 계산 기준", "유럽 표준", "DTES 평가 기반"],
     bg: "bg-white border border-card-3",
     arrowColor: "text-card-inst-text",
+    py: true,
   },
   {
     image: "/assets/icons/star_label.svg",
@@ -41,6 +42,7 @@ export const iscCardsData: InternationalStandardCard[] = [
     ],
     bg: "bg-white border border-card-3",
     arrowColor: "text-card-inst-text",
+    py: true,
   },
   {
     image: "/assets/icons/energy.svg",
@@ -52,6 +54,7 @@ export const iscCardsData: InternationalStandardCard[] = [
     ],
     bg: "bg-white border border-card-3",
     arrowColor: "text-card-inst-text",
+    py: true,
   },
 ];
 

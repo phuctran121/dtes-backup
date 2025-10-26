@@ -24,10 +24,10 @@ function WhyDTES({ data }: WhyDTESProps) {
   );
   return (
     <section className="w-full min-h-screen py-16 md:py-24">
-      <div className="container mx-auto px-4 sm:px-8 lg:px-16 text-center ">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-46 text-center ">
         {/* Above Content */}
         <div className="mb-16 w-full">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-title-white mb-8">
+          <h2 className="text-3xl md:text-5xl font-medium text-title-white mb-8">
             건축 전에, 성능을 예측하세요
           </h2>
           <p className="text-title-white text-2xl md:text-4xl w-full mx-auto leading-relaxed max-w-[1050px]">
@@ -38,10 +38,10 @@ function WhyDTES({ data }: WhyDTESProps) {
 
         {/* Vertical Bar */}
         <div className="relative flex justify-center mb-16">
-          <div className="h-28 w-[1px] bg-white rounded-full hidden lg:block"></div>
+          <div className="h-28 w-[2px] bg-gray-300 rounded-full hidden lg:block"></div>
         </div>
 
-        <h2 className="text-5xl font-extrabold mb-16 text-title-white hidden lg:block">
+        <h2 className="text-5xl font-medium mb-16 text-title-white hidden lg:block">
           왜 DTES가 필요할까요?
         </h2>
 

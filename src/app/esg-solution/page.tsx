@@ -1,10 +1,10 @@
 import React from "react";
-import ESGFeaturesSection from "@/components/esg-solution/ESGFeaturesSection";
-import ESGHeaderSection from "@/components/esg-solution/ESGHeaderSection";
-import ESGCasesSection from "@/components/esg-solution/ESGCasesSection";
+import ESGFeaturesSection from "@/components/esgsolution/ESGFeaturesSection";
+import ESGHeaderSection from "@/components/esgsolution/ESGHeaderSection";
+import ESGCasesSection from "@/components/esgsolution/ESGCasesSection";
 import { casesData, resultsData } from "@/constants/esgSolutionData";
-import ESGResultSection from "@/components/esg-solution/ESGResultSection";
-import ESGFlowSection from "@/components/esg-solution/ESGFlowSection";
+import ESGResultSection from "@/components/esgsolution/ESGResultSection";
+import ESGFlowSection from "@/components/esgsolution/ESGFlowSection";
 
 export default function page() {
   return (

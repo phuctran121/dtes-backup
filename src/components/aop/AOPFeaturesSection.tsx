@@ -28,11 +28,11 @@ const features = [
 
 export default function AOPFeaturesSection() {
   return (
-    <section className="w-full min-h-screen py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-0 py-18">
+    <section className="w-full min-h-screen py-12 bg-white">
+      <div className="container  mx-auto px-4 sm:px-8 lg:px-46 py-18">
         {/* Heading */}
         <h2 className="text-2xl md:text-4xl font-bold tracking-wide text-center mb-20">
-          <span className="text-[#174CE6]">FEATURES</span> - 4칸 카드
+          <span className="text-button-main">FEATURES</span> - 4칸 카드
         </h2>
 
         {/* Cards grid */}
@@ -40,11 +40,11 @@ export default function AOPFeaturesSection() {
           {features.map((item, i) => (
             <div
               key={i}
-              className={`group rounded-3xl p-4 md:p-12 flex justify-center items-start text-left lg:items-center lg:text-center flex-col gap-2 lg:gap-12 transition-all duration-300 hover:scale-[1.02] hover:bg-card-3
+              className={`group rounded-3xl p-6 sm:p-8 flex justify-center items-start text-left lg:items-center lg:text-center flex-col gap-2 lg:gap-10 transition-all duration-300 hover:scale-[1.02] hover:bg-card-3
                   border border-[#2B4EE8] text-[#2E6BFF] hover:shadow-md`}
             >
               <h3
-                className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-[#64ADFF] group-hover:text-white order-2 lg:order-1`}
+                className={`text-xl md:text-2xl lg:text-3xl font-medium mb-4 text-[#64ADFF] group-hover:text-white order-2 lg:order-1`}
               >
                 {item.title}
               </h3>
@@ -55,7 +55,7 @@ export default function AOPFeaturesSection() {
                 height={120}
                 loading="lazy"
                 decoding="async"
-                className="object-contain size-14 md:size-18 lg:size-40 transition-none group-hover:brightness-0 group-hover:invert order-1 lg:order-2 mb-18 md:mb-24 lg:mb-0"
+                className="object-contain size-14 md:size-18 lg:size-28 transition-none group-hover:brightness-0 group-hover:invert order-1 lg:order-2 mb-18 md:mb-24 lg:mb-0"
               />
               <p
                 className={`text-xs md:text-sm lg:text-base font-light leading-relaxed text-[#64ADFF] group-hover:text-white order-3`}

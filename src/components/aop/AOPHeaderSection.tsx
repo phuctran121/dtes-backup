@@ -4,8 +4,8 @@ export default function AOPHeaderSection() {
   return (
     <section className="relative w-full">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        {/* Ảnh desktop */}
+
+      {/* <div className="absolute inset-0 z-0">
         <Image
           src="/assets/aop/aop-header-background.webp"
           alt="ESG Header Background"
@@ -14,10 +14,9 @@ export default function AOPHeaderSection() {
           quality={75}
           className="hidden md:block object-cover object-center"
           sizes="(max-width: 768px) 100vw, 100vw"
-          // placeholder="blur"
-          // blurDataURL="/assets/esg/esg-header-background-blur.webp"
+          placeholder="blur"
+          blurDataURL="/assets/esg/esg-header-background-blur.webp"
         />
-        {/* Ảnh mobile */}
         <Image
           src="/assets/esg/esg-header-background-mb.webp"
           alt="ESG Header Background Mobile"
@@ -26,13 +25,27 @@ export default function AOPHeaderSection() {
           quality={75}
           className="block md:hidden object-cover object-center"
           sizes="100vw"
-          // placeholder="blur"
-          // blurDataURL="/assets/esg/esg-header-background-mb-blur.webp"
+          placeholder="blur"
+          blurDataURL="/assets/esg/esg-header-background-mb-blur.webp"
         />
+      </div> */}
+
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          className="w-full h-full object-cover select-none pointer-events-none"
+          src="/videos/aop-hero-section.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+        />
+        {/* Overlay tối để chữ nổi bật */}
       </div>
 
       {/* Overlay content */}
-      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center container sm:px-0 px-6 mx-auto py-32 gap-24 md:gap-12">
+      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center container px-4 sm:px-8 lg:px-16 mx-auto py-32 gap-24 md:gap-12">
         {/* Top Title */}
         <div className="w-full pt-20">
           <h1 className="text-5xl md:text-7xl text-white font-medium leading-relaxed mb-4">

@@ -10,6 +10,7 @@ export interface InternationalStandardCard {
   content: string[];
   bg: string;
   arrowColor: string;
+  py?: boolean;
 }
 
 export interface PackageItem {

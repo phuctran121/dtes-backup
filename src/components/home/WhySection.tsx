@@ -7,9 +7,9 @@ interface WhySectionProps {
 
 export default function WhySection({ data }: WhySectionProps) {
   return (
-    <section className="w-full min-h-screen flex items-center py-16 md:py-24 border-t border-white/70">
-      <div className="container mx-auto px-4 sm:px-8 lg:px-16 text-center">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6">
+    <section className="w-full flex items-center py-16 md:py-24 border-t border-white/70">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-46 text-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4 sm:mb-6">
           왜 <span className="text-text-highlight">DTES</span>인가요?
         </h2>
 

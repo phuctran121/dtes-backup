@@ -15,17 +15,17 @@ export default function SolutionPackageCard({
     <article className="flex flex-col h-full rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
       {/* Header */}
       <div
-        className={`${p.headerBg} px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-center`}
+        className={`${p.headerBg} px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-center`}
       >
-        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center">
+        <h3 className="text-base sm:text-lg md:text-xl font-medium text-white text-center">
           {p.title}
         </h3>
       </div>
 
       {/* Body */}
-      <div className="flex flex-col flex-grow items-center text-center gap-4 px-4 sm:px-6 py-6 sm:py-8">
+      <div className="flex flex-col flex-grow items-center text-center gap-0 lg:gap-2 px-4 sm:px-6 py-6 sm:py-8">
         {/* Subtitle */}
-        <p className="text-xs sm:text-sm text-card-content whitespace-pre-line font-medium min-h-[40px]">
+        <p className="text-xs sm:text-sm text-card-content whitespace-pre-line font-normal min-h-[40px]">
           {p.subtitle}
         </p>
 
@@ -36,7 +36,7 @@ export default function SolutionPackageCard({
             alt={p.title}
             width={80}
             height={80}
-            className="w-20 h-20 sm:size-28 object-contain"
+            className="w-20 h-20 sm:size-22 object-contain"
             priority={index === 0}
             loading={index === 0 ? "eager" : "lazy"}
           />
@@ -56,7 +56,7 @@ export default function SolutionPackageCard({
         {/* Button */}
         <div className="w-full mt-auto pb-4 sm:pb-6">
           <Button
-            className={`${p.btnClass} w-3/5 sm:w-2/5 py-4 sm:py-6 rounded-full text-sm sm:text-base font-medium transition-all`}
+            className={`${p.btnClass} w-3/5 py-4 sm:py-6 rounded-full text-sm sm:text-base font-medium transition-all`}
           >
             결제
           </Button>
