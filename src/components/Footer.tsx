@@ -23,29 +23,30 @@ export default function Footer() {
               <span className="font-semibold text-2xl text-white">DTES</span>
             </div>
             {/* Contact Info */}
-            <div className="flex flex-col lg:flex-row gap-6 items-center text-xs sm:text-base leading-relaxed text-white/90">
-              <div className="flex flex-wrap sm:flex-nowrap w-full lg:w-fit flex-row gap-4">
+            <div className="flex flex-col justify-between lg:flex-row gap-6 items-center text-xs sm:text-base leading-relaxed text-white/90">
+              <div className="flex basis-2/3 flex-wrap sm:flex-nowrap w-full flex-row gap-4">
                 {/* Column 1 */}
-                <div className="space-y-1">
-                  <p>대표이사 :</p>
-                  <p>대표전화 : 0000-0000</p>
-                  <p>개인정보책임자 :</p>
+                <div className="flex-1 space-y-1">
+                  <p>대표이사: 류태준</p>
+                  <p>대표전화: 070-4274-8645</p>
                 </div>
                 {/* Column 2 */}
-                <div className="space-y-1">
-                  <p>사업자등록번호 : 000-000-000</p>
-                  <p>팩스 : 000-0000-0000</p>
-                  <p>연락처 : DTES@contact.com</p>
+                <div className="flex-1 space-y-1">
+                  <p>사업자등록번호: 226-87-03629</p>
+                  <p>팩스: 02-6008 6051</p>
+                  <p>연락처: DTES@contact.com</p>
                 </div>
                 {/* Column 3 */}
-                <div className="space-y-1">
-                  <p>주소 :</p>
-                  <p>메일 : contact@dtes.kr</p>
+                <div className="flex-1 space-y-1">
+                  <p>
+                    주소: 서울특별시 강남구 테헤란로 47길 17, 302-비23호(역삼동)
+                  </p>
+                  <p>메일: contact@dtes.kr</p>
                 </div>
               </div>
 
               {/* Copyright */}
-              <div className="space-y-1 ml-24 hidden lg:block">
+              <div className="space-y-1 hidden lg:block">
                 <p className="font-semibold text-white">개인정보처리방침</p>
                 <p className="text-white/70 text-xs sm:text-base">
                   Copyright © DTES All rights reserved.

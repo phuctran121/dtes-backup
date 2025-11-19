@@ -68,15 +68,17 @@ export default function AOPFeaturesSection() {
 
         {/* Illustration */}
         <div className="flex justify-center mt-24">
-          <Image
-            src="/assets/aop/aop-tech-structure.webp"
-            alt="ESG features illustration"
+          <video
             width={1000}
             height={1000}
-            loading="lazy"
-            decoding="async"
-            className="max-w-full h-auto select-none pointer-events-none"
-          />
+            autoPlay
+            loop
+            muted
+            playsInline
+            src={"/videos/tech-structure.mp4"}
+            poster="/assets/aop/aop-tech-structure.webp"
+            className="max-w-full h-auto select-none pointer-events-none object-contain"
+          ></video>
         </div>
       </div>
     </section>

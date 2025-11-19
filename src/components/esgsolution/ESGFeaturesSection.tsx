@@ -26,6 +26,7 @@ export default function ESGFeaturesSection() {
           <video
             className="w-full aspect-video object-cover select-none pointer-events-none"
             src="/videos/esg-features-section.mp4"
+            poster="/assets/esg/esg-core.webp"
             autoPlay
             loop
             muted

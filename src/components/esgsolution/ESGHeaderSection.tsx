@@ -8,6 +8,7 @@ export default function ESGHeaderSection() {
         <video
           className="w-full h-full object-cover pointer-events-none select-none"
           src="/videos/esg_hero_section.mp4"
+          poster="/assets/esg/esg-header-background.webp"
           autoPlay
           loop
           muted

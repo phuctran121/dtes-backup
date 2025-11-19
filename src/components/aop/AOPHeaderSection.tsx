@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function AOPHeaderSection() {
   return (
     <section className="relative w-full">
@@ -35,13 +33,13 @@ export default function AOPHeaderSection() {
         <video
           className="w-full h-full object-cover select-none pointer-events-none"
           src="/videos/aop-hero-section.mp4"
+          poster="/assets/aop/aop-header-background.webp"
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
         />
-        {/* Overlay tối để chữ nổi bật */}
       </div>
 
       {/* Overlay content */}
