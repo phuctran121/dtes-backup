@@ -6,6 +6,8 @@ import { casesData, resultsData } from "@/constants/esgSolutionData";
 import ESGResultSection from "@/components/esgsolution/ESGResultSection";
 import ESGFlowSection from "@/components/esgsolution/ESGFlowSection";
 
+export const dynamic = "force-static";
+
 export default function page() {
   return (
     <div>
