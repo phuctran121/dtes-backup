@@ -1,13 +1,10 @@
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
 import HeroSection from "@/components/home/HeroSection";
 import WhySection from "@/components/home/WhySection";
 import InternationalStandardsSection from "@/components/home/InternationalStandardsSection";
 import SolutionPackagesSection from "@/components/home/SolutionPackagesSection";
-const WhyDTESSection = dynamic(() =>
-  import("@/components/home/WhyDTESSection").then((mod) => mod.default)
-);
+import WhyDTESSection from "@/components/home/WhyDTESSection";
 
 import {
   whyCardsData,
@@ -15,6 +12,8 @@ import {
   packagesCardsData,
   whyBoxesData,
 } from "@/constants/homeData";
+
+export const dynamic = "force-static";
 
 export default function HomePage() {
   return (
