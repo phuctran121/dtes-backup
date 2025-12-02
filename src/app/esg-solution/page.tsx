@@ -19,7 +19,7 @@ export default function Home() {
       <ESGHeaderSection />
       <ESGFeaturesSection />
       <ESGCasesSection data={casesData} />
-      <ESGFlowSection />
+      {/* <ESGFlowSection /> */}
       <ESGResultSection data={resultsData} />
     </main>
   );
