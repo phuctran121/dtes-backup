@@ -6,17 +6,18 @@ export default function ESGHeaderSection() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          className="w-full h-full object-cover pointer-events-none select-none"
           src="/videos/esg_hero_section.mp4"
-          poster="/assets/esg/esg-header-background.webp"
+          className="w-full h-full object-cover pointer-events-none select-none"
           autoPlay
-          loop
           muted
+          loop
           playsInline
-          preload="auto"
-          disablePictureInPicture
-          disableRemotePlayback
+          poster="/assets/esg/esg-header-background.webp"
+          preload="none"
         />
+        <source src="/videos/promo.webm" type="video/webm" />{" "}
+        {/* Ưu tiên WebM nhẹ hơn */}
+        <source src="/videos/promo.mp4" type="video/mp4" />
         {/* Overlay dark */}
         {/* <div className="absolute inset-0 bg-black/40" /> */}
       </div>
