@@ -6,6 +6,12 @@ import IntroSection from "@/components/home/IntroSection";
 import VideoSection from "@/components/home/VideoSection";
 import HomeSliderSection from "@/components/home/HomeSliderSection";
 // import FeaturedSection from "@/components/home/FeaturedSection";
+import ESGFeaturesSection from "@/components/esgsolution/ESGFeaturesSection";
+import ESGHeaderSection from "@/components/esgsolution/ESGHeaderSection";
+import ESGCasesSection from "@/components/esgsolution/ESGCasesSection";
+import { casesData, resultsData } from "@/constants/esgSolutionData";
+import ESGResultSection from "@/components/esgsolution/ESGResultSection";
+import ESGFlowSection from "@/components/esgsolution/ESGFlowSection";
 
 // 1. Force Static: Bắt buộc trang này là tĩnh
 
@@ -16,21 +22,21 @@ import HomeSliderSection from "@/components/home/HomeSliderSection";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <h1>{Date.now()}</h1>
-      {/* Load ngay lập tức (Static HTML + CSS) */}
-      <HeroSection />
-
-      <IntroductionSection />
+      {/* <HeroSection /> */}
+      <ESGHeaderSection />
+      <ESGFeaturesSection />
+      {/* <ESGFlowSection /> */}
+      {/* <IntroductionSection /> */}
 
       {/* <FeaturedSection /> */}
 
-      <IntroSection />
+      {/* <IntroSection />
 
       <TestPSection />
 
       <HomeSliderSection />
 
-      <VideoSection />
+      <VideoSection /> */}
 
       {/* Load Data bất đồng bộ + Lazy load JS Swiper */}
       {/* <FeaturedSection /> */}

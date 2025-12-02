@@ -1,5 +1,5 @@
-import Image from "next/image";
 import ESGFeatureIcons from "./ESGFeatureIcons";
+import posterImg from "@/assets/images/esg-core.webp";
 
 export default function ESGFeaturesSection() {
   return (
@@ -24,18 +24,18 @@ export default function ESGFeaturesSection() {
         {/* Illustration */}
         <div className="flex justify-center py-16 md:py-20">
           <video
-            className="w-full aspect-video object-cover select-none pointer-events-none"
             src="/videos/esg-features-section.mp4"
-            poster="/assets/esg/esg-core.webp"
+            className="w-full aspect-video object-cover select-none pointer-events-none"
             autoPlay
-            loop
             muted
+            loop
             playsInline
+            poster={posterImg.src}
             preload="none"
-            disablePictureInPicture
-            disableRemotePlayback
-            controlsList="nodownload nofullscreen noremoteplayback"
           />
+          <source src="/videos/promo.webm" type="video/webm" />{" "}
+          {/* Ưu tiên WebM nhẹ hơn */}
+          <source src="/videos/promo.mp4" type="video/mp4" />
         </div>
 
         {/* Icons */}

@@ -1,4 +1,5 @@
 // import Image from "next/image";
+import posterImg from "@/assets/images/esg-header-background.webp";
 
 export default function ESGHeaderSection() {
   return (
@@ -12,7 +13,7 @@ export default function ESGHeaderSection() {
           muted
           loop
           playsInline
-          poster="/assets/esg/esg-header-background.webp"
+          poster={posterImg.src}
           preload="none"
         />
         <source src="/videos/promo.webm" type="video/webm" />{" "}
