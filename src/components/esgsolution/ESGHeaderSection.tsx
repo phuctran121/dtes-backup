@@ -1,26 +1,16 @@
 // import Image from "next/image";
 import posterImg from "@/assets/images/esg-header-background.webp";
-
+import HeroVideo from "./HeroVideo";
 export default function ESGHeaderSection() {
   return (
     <section className="relative w-full">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <video
-          src="/videos/esg_hero_section.mp4"
-          className="w-full h-full object-cover pointer-events-none select-none"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={posterImg.src}
-          preload="none"
+        <HeroVideo
+          posterSrc={posterImg.src} // Ảnh tĩnh
+          videoSrcMp4="/videos/esg_hero_section.mp4" // Video (nên để trong folder public/videos)
+          // videoSrcWebm="/videos/hero-bg.webm" // Nên convert thêm file này
         />
-        <source src="/videos/promo.webm" type="video/webm" />{" "}
-        {/* Ưu tiên WebM nhẹ hơn */}
-        <source src="/videos/promo.mp4" type="video/mp4" />
-        {/* Overlay dark */}
-        {/* <div className="absolute inset-0 bg-black/40" /> */}
       </div>
 
       {/* Overlay content */}
