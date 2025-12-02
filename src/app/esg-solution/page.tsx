@@ -11,7 +11,7 @@ export default function page() {
     <div>
       <ESGHeaderSection />
       <ESGFeaturesSection />
-      <ESGFlowSection />
+      {/* <ESGFlowSection /> */}
       <ESGCasesSection data={casesData} />
       <ESGResultSection data={resultsData} />
     </div>
