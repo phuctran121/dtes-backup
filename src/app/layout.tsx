@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 // import { Noto_Sans_KR } from "next/font/google";
 // import localFont from "next/font/local";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
 // import localFont from "next/font/local";
 
 // const notoSansKr = Noto_Sans_KR({
@@ -16,15 +16,15 @@ import { Geist, Geist_Mono } from "next/font/google";
 //   // preload: true,
 // });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 // const pretendard = localFont({
 //   src: [
@@ -60,7 +60,7 @@ export default function RootLayout({
     <html lang="ko">
       <body
         // className={`${pretendard.variable} antialiased`}
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased font-sans`}
       >
         <div className="relative z-10">
           <Navigation />
