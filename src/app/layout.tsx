@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 // import { Noto_Sans_KR } from "next/font/google";
 // import localFont from "next/font/local";
@@ -62,7 +62,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="relative z-10">
-          {/* <Navigation /> */}
+          <Navigation />
           <div className="min-h-screen bg-transparent">
             <main className="mx-auto">{children}</main>
           </div>
