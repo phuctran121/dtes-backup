@@ -39,7 +39,7 @@ const cards = [
 export default function AOPAboutSection() {
   return (
     <section
-      className="w-full min-h-screen py-16 md:py-24 bg-[url('/assets/aop/aop-about-background.webp')] 
+      className="w-full py-16 md:py-24 bg-[url('/assets/aop/aop-about-background.webp')] 
       bg-cover bg-center bg-no-repeat"
     >
       <div className="container mx-auto px-4 sm:px-8 lg:px-46">
@@ -47,12 +47,14 @@ export default function AOPAboutSection() {
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Left side now part of grid */}
           {/* Title */}
-          <div className="flex flex-col gap-2">
-            <h2 className="text-2xl md:text-4xl font-semibold text-button-main">
+          <div className="flex flex-col">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-button-main">
               <span className="">ABOUT</span>
             </h2>
-            <h2 className="text-xl md:text-4xl font-bold ">AI 온톨로지란?</h2>
-            <p className="text-gray-700 text-sm md:text-lg max-w-96 font-medium leading-relaxed mt-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold ">
+              AI 온톨로지란?
+            </h2>
+            <p className="text-gray-700 text-sm md:text-lg max-w-96 font-medium leading-snug mt-4">
               데이터의 관계와 의미를 정의해, AI가 이해하고 추론하는 기반을
               제공합니다.
             </p>
@@ -64,7 +66,7 @@ export default function AOPAboutSection() {
               key={i}
               className="relative flex justify-center items-center flex-col gap-10 md:gap-18 bg-white rounded-2xl p-5 md:p-6 lg:p-8 shadow-sm hover:shadow-md transition-all border border-transparent hover:border-[#D6E3FF]"
             >
-              <div className="flex items-start w-full justify-between mb-4">
+              <div className="flex items-start w-full justify-between mb-2">
                 {/* <div className="-ml-[15px] size-18">{item.icon}</div> */}
                 <Image
                   src={item.icon}
@@ -78,10 +80,10 @@ export default function AOPAboutSection() {
                 <ArrowUpRight className="size-10 md:size-12 text-[#5197EC]" />
               </div>
               <div className="flex flex-col gap-4">
-                <h3 className="font-medium mb-2 text-xl md:text-2xl lg:text-3xl text-[#3D3D3D]">
+                <h3 className="font-semibold mb-2 text-lg md:text-xl lg:text-2xl tracking-tighter text-[#3D3D3D]">
                   {item.title}
                 </h3>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed min-h-[75px] tracking-tighter">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed min-h-[75px] font-medium tracking-tighter">
                   {item.desc}
                 </p>
               </div>

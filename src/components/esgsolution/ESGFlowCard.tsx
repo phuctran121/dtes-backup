@@ -34,7 +34,7 @@ export default function ESGFlowCard({ step, isActive }: ESGFlowCardProps) {
           </span>
           <div className="flex flex-col items-start gap-4">
             <h3 className="text-xl md:text-2xl font-semibold">{step.title}</h3>
-            <p className="text-xs md:text-base leading-relaxed">{step.desc}</p>
+            <p className="text-xs md:text-base leading-snug">{step.desc}</p>
           </div>
         </div>
         <Image

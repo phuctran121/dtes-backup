@@ -47,10 +47,10 @@ export default function Navigation() {
 
   const menuItems = useMemo(
     () => [
-      { name: "DTSE란?", href: "/" },
-      { name: "지금 왜", href: "/about" },
-      { name: "우리의 솔루션", href: "/esg-solution" },
-      { name: "영향력과 그 이상", href: "/ai-ontology-platform" },
+      { name: "디테스 소개", href: "/" },
+      { name: "디지털 트윈 플랫폼", href: "/" },
+      { name: "ESG 컨설팅 & 솔루션", href: "/esg-solution" },
+      { name: "AI 온톨로지 플랫폼", href: "/ai-ontology-platform" },
     ],
     []
   );
@@ -62,10 +62,10 @@ export default function Navigation() {
         transition={{ duration: 0.4, ease: "easeInOut" }}
         className="fixed top-0 left-0 right-0 z-40 bg-none h-fit "
       >
-        <div className="container mx-auto">
+        <div className="container px-4 md:px-6 lg:px-8 mx-auto">
           <motion.div
             animate={{
-              height: isScrolled ? "50px" : "88px",
+              height: isScrolled ? "50px" : "80px",
             }}
             className="flex justify-between items-center h-20"
           >
@@ -83,7 +83,7 @@ export default function Navigation() {
                 priority
                 draggable={false}
                 className={`text-white logo  p-1 object-contain trasition-all duration-300 ${
-                  isScrolled ? "size-10" : "size-12"
+                  isScrolled ? "size-8" : "size-10"
                 }`}
               />
               <span
@@ -101,8 +101,8 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-white/90 hover:text-blue-600 px-3 py-2 transition-all duration-300 ${
-                    isScrolled ? "text-sm" : "text-base "
+                  className={`text-[#9B9CB0] font-medium tracking-wide hover:text-blue-600 px-3 py-2 transition-all duration-300 ${
+                    isScrolled ? "text-sm text-white/80" : "text-base "
                   }`}
                   prefetch
                 >
@@ -149,13 +149,15 @@ export default function Navigation() {
           height: isScrolled ? (isMenuOpen ? "88px" : "50px") : "88px",
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="w-full z-[60] lg:hidden fixed top-0 left-0 right-0"
+        className="w-full z-[60] lg:hidden fixed top-0 left-0 right-0 pointer-events-none"
       >
         <div className="container mx-auto px-4 flex items-center justify-end h-full">
-          <HamburgerButton
-            isOpen={isMenuOpen}
-            onToggle={() => setIsMenuOpen((prev) => !prev)}
-          />
+          <div className="pointer-events-auto">
+            <HamburgerButton
+              isOpen={isMenuOpen}
+              onToggle={() => setIsMenuOpen((prev) => !prev)}
+            />
+          </div>
         </div>
       </motion.div>
     </>

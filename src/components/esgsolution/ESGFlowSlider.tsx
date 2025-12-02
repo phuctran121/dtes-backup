@@ -48,8 +48,8 @@ export default function ESGFlowSlider() {
   };
 
   return (
-    <section className="w-full gap-12 bg-[#F1F8FF] py-32 flex flex-col justify-center items-center overflow-hidden">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide text-center mb-4">
+    <section className="w-full gap-12 bg-[#F1F8FF] py-10 md:py-16 lg:py-32 flex flex-col justify-center items-center overflow-hidden">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-center mb-4">
         <span className="text-[#174CE6]">FLOW</span> - ESG 플랫폼 운영 프로세스
       </h2>
 

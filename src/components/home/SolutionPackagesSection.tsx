@@ -14,7 +14,7 @@ export default function SolutionPackagesSection({
       <div className="container mx-auto px-4 sm:px-8 lg:px-46">
         {/* Section title */}
         <div className="mb-12 md:mb-14 text-left">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-snug tracking-tighter">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug tracking-tighter">
             고객 관리 운영이 필요한 곳이라면? 맞춤{" "}
             <br className="hidden sm:block" />형 솔루션 제공
           </h2>

@@ -36,16 +36,16 @@ export default function ESGFeatureIcons() {
           key={item.id}
           className="flex flex-col items-center text-center gap-2 md:gap-4 lg:gap-6"
         >
-          <div className="size-20 md:size-30 lg:size-42 flex items-center justify-center rounded-full bg-blue-50 mb-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <div className="size-20 md:size-30 lg:size-38 flex items-center justify-center rounded-full bg-blue-50 mb-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <Image
               src={item.icon}
               alt={item.title}
               width={48}
               height={48}
-              className="size-20 md:size-30 lg:size-42"
+              className="size-20 md:size-30 lg:size-38"
             />
           </div>
-          <p className="text-xs md:text-xl lg:text-2xl font-bold text-gray-800">
+          <p className="text-base md:text-lg lg:text-xl font-bold text-gray-800">
             {item.title}
           </p>
         </div>

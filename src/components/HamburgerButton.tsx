@@ -39,7 +39,7 @@ export default function HamburgerButton({
   return (
     <button
       onClick={onToggle}
-      className={`relative w-10 h-10 text-white hover:text-gray-900 focus:outline-none rounded-lg transition-colors duration-200 flex items-center justify-center ${
+      className={`relative w-10 h-10 text-white hover:text-gray-900 focus:outline-none rounded-lg transition-colors duration-200 flex items-center justify-center cursor-pointer ${
         isOpen ? "z-[60]" : "z-50"
       }`}
       aria-label="Toggle menu"

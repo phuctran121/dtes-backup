@@ -18,19 +18,15 @@ const WhyDTESMobile = dynamic(() => import("./WhyDTESMobile"), {
 });
 
 function WhyDTES({ data }: WhyDTESProps) {
-  const [left, mid, right] = useMemo(
-    () => [data.slice(0, 2), data.slice(2, 4), data.slice(4, 6)],
-    [data]
-  );
   return (
-    <section className="w-full min-h-screen py-16 md:py-24">
+    <section className="w-full py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-8 lg:px-46 text-center ">
         {/* Above Content */}
         <div className="mb-16 w-full">
-          <h2 className="text-3xl md:text-5xl font-medium text-title-white mb-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter text-title-white mb-8 ">
             건축 전에, 성능을 예측하세요
           </h2>
-          <p className="text-title-white text-2xl md:text-4xl w-full mx-auto leading-relaxed max-w-[1050px]">
+          <p className="text-2xl font-medium md:text-3xl lg:text-4xl w-full mx-auto leading-relaxed max-w-[1050px] bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
             DTES는 건축 설계 및 시공 전, 실시간 에너지 시뮬레이션을 통해 에너지
             낭비를 줄이고 성능을 최적화할 수 있게 돕습니다.
           </p>
@@ -41,7 +37,7 @@ function WhyDTES({ data }: WhyDTESProps) {
           <div className="h-28 w-[2px] bg-gray-300 rounded-full hidden lg:block"></div>
         </div>
 
-        <h2 className="text-5xl font-medium mb-16 text-title-white hidden lg:block">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wide mb-16 text-title-white hidden lg:block">
           왜 DTES가 필요할까요?
         </h2>
 

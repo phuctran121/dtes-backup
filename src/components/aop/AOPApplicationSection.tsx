@@ -29,7 +29,7 @@ export default function ApplicationSection() {
       bg-cover bg-center bg-no-repeat"
     >
       <div className="container mx-auto px-4 sm:px-8 lg:px-46 flex flex-col items-center justify-start py-16">
-        <h2 className="text-2xl md:text-4xl font-bold text-text-esg-title mb-14">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-text-esg-title mb-14">
           APPLICATION
         </h2>
         {/* 4-column grid on md+, stacked on mobile */}

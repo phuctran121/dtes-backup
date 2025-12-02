@@ -2,7 +2,7 @@ import { WhyCard, InternationalStandardCard } from "../types/home.types";
 
 export const casesData: InternationalStandardCard[] = [
   {
-    image: "/assets/icons/star.svg",
+    image: "/assets/icons/as-task.svg",
     title: "기업 A사",
     content: [
       "다양한 이해 관계자의 요구와 국내외 온실가스 규제에 대응하기 위한 기업의 온실가스 배출량 환경을 분석하고, 최적의 관리 체계를 세울 수 있도록 지원합니다.",
@@ -11,7 +11,7 @@ export const casesData: InternationalStandardCard[] = [
     arrowColor: "text-card-inst-text",
   },
   {
-    image: "/assets/icons/star_label.svg",
+    image: "/assets/icons/as-task.svg",
     title: "ESG 점수 향상",
     content: [
       "다양한 이해 관계자의 요구와 국내외 온실가스 규제에 대응하기 위한 기업의 온실가스 배출량 환경을 분석하고, 최적의 관리 체계를 세울 수 있도록 지원합니다.",
@@ -20,7 +20,7 @@ export const casesData: InternationalStandardCard[] = [
     arrowColor: "text-card-inst-text",
   },
   {
-    image: "/assets/icons/energy.svg",
+    image: "/assets/icons/bank.svg",
     title: "지자체 환경본부",
     content: [
       "다양한 이해 관계자의 요구와 국내외 온실가스 규제에 대응하기 위한 기업의 온실가스 배출량 환경을 분석하고, 최적의 관리 체계를 세울 수 있도록 지원합니다.",
@@ -29,7 +29,7 @@ export const casesData: InternationalStandardCard[] = [
     arrowColor: "text-card-inst-text",
   },
   {
-    image: "/assets/icons/energy.svg",
+    image: "/assets/icons/box.svg",
     title: "탄소배출 관리",
     content: [
       "다양한 이해 관계자의 요구와 국내외 온실가스 규제에 대응하기 위한 기업의 온실가스 배출량 환경을 분석하고, 최적의 관리 체계를 세울 수 있도록 지원합니다.",

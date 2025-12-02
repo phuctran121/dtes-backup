@@ -8,7 +8,7 @@ export default function page() {
     <div>
       {/* <ESGFlowSection /> */}
       <div className="min-h-[100px] bg-blue-900"></div>
-      <div className="min-h-screen flex justify-center items-center">
+      <div className="flex justify-center items-center">
         <h1 className="text-6xl font-bold">About Page</h1>
       </div>
     </div>

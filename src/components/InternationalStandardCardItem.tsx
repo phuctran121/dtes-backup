@@ -40,7 +40,7 @@ export default function InternationalStandardCardItem({
       {/* Content */}
       <CardContent className="px-0 ml-2">
         <CardTitle
-          className={`text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-5 lg:mb-6 transition-all duration-300 text-card-inst-text group-hover:text-white`}
+          className={`text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-5 lg:mb-6 line-clamp-1 transition-all duration-300 text-card-inst-text group-hover:text-white`}
         >
           {card.title}
         </CardTitle>

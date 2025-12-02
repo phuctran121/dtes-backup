@@ -28,10 +28,10 @@ const features = [
 
 export default function AOPFeaturesSection() {
   return (
-    <section className="w-full min-h-screen py-12 bg-white">
-      <div className="container  mx-auto px-4 sm:px-8 lg:px-46 py-18">
+    <section className="w-full bg-white">
+      <div className="container  mx-auto px-4 sm:px-8 lg:px-46 py-18 mt-0 md:mt-2 lg:mt-6">
         {/* Heading */}
-        <h2 className="text-2xl md:text-4xl font-bold tracking-wide text-center mb-20">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-center mb-20">
           <span className="text-button-main">FEATURES</span> - 4칸 카드
         </h2>
 
@@ -40,11 +40,11 @@ export default function AOPFeaturesSection() {
           {features.map((item, i) => (
             <div
               key={i}
-              className={`group rounded-3xl p-6 sm:p-8 flex justify-center items-start text-left lg:items-center lg:text-center flex-col gap-2 lg:gap-10 transition-all duration-300 hover:scale-[1.02] hover:bg-card-3
-                  border border-[#2B4EE8] text-[#2E6BFF] hover:shadow-md`}
+              className={`group rounded-3xl flex justify-center items-start text-left lg:items-center lg:text-center flex-col gap-2 lg:gap-10 transition-all duration-300 hover:scale-[1.02] hover:bg-card-3
+                  border border-[#2B4EE8] text-[#2E6BFF] hover:shadow-md p-4 sm:py-4 sm:px-8`}
             >
               <h3
-                className={`text-xl md:text-2xl lg:text-3xl font-medium mb-4 text-[#64ADFF] group-hover:text-white order-2 lg:order-1`}
+                className={`text-lg md:text-xl lg:text-2xl tracking-tight font-semibold mb-4 text-[#64ADFF] group-hover:text-white order-2 lg:order-1`}
               >
                 {item.title}
               </h3>
@@ -75,8 +75,8 @@ export default function AOPFeaturesSection() {
             loop
             muted
             playsInline
-            src={"/videos/tech-structure.mp4"}
-            poster="/assets/aop/aop-tech-structure.webp"
+            src={"/videos/aop-tech-structure.mp4"}
+            poster="/assets/posters/aop-tech-structure-poster.webp"
             className="max-w-full h-auto select-none pointer-events-none object-contain"
           ></video>
         </div>

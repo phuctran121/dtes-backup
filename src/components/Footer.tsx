@@ -4,7 +4,7 @@ import { BookOpen, Download } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
-      <div className="container mx-auto px-4 sm:px-8 lg:px-16 py-12">
+      <div className="container mx-auto py-12 px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Left Side */}
           <div className="lg:col-span-9 flex flex-col gap-6">
@@ -33,7 +33,7 @@ export default function Footer() {
                 {/* Column 2 */}
                 <div className="flex-1 space-y-1">
                   <p>사업자등록번호: 226-87-03629</p>
-                  <p>팩스: 02-6008 6051</p>
+                  <p>팩스: 02-6008-6051</p>
                   <p>연락처: DTES@contact.com</p>
                 </div>
                 {/* Column 3 */}

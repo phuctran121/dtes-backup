@@ -13,7 +13,7 @@ export default function InternationalStandardsSection({
       <div className="container mx-auto px-4 sm:px-8 lg:px-46">
         {/* Title */}
         <div className="mb-10 md:mb-14 text-center md:text-left">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-snug">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tighter leading-snug">
             국제 기술 기준
           </h2>
         </div>

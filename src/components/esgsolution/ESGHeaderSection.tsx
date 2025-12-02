@@ -1,43 +1,51 @@
 // import Image from "next/image";
-import posterImg from "@/assets/images/esg-header-background.webp";
-import HeroVideo from "./HeroVideo";
+
 export default function ESGHeaderSection() {
   return (
     <section className="relative w-full">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <HeroVideo
-          posterSrc={posterImg.src} // Ảnh tĩnh
-          videoSrcMp4="/videos/esg_hero_section.mp4" // Video (nên để trong folder public/videos)
-          // videoSrcWebm="/videos/hero-bg.webm" // Nên convert thêm file này
+        <video
+          className="w-full h-full object-cover pointer-events-none select-none"
+          src="/videos/esg_hero_section.mp4"
+          poster="/assets/posters/esg-hero-section-poster.webp"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
         />
+        {/* Overlay dark */}
+        {/* <div className="absolute inset-0 bg-black/40" /> */}
       </div>
 
       {/* Overlay content */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center container px-4 sm:px-8 lg:px-16 mx-auto py-32 gap-24 md:gap-12">
         {/* Top Title */}
         <div className="w-full pt-20">
-          <h1 className="text-5xl md:text-7xl text-white font-medium leading-relaxed mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl text-white font-medium leading-relaxed tracking-wide mb-4">
             ESG SOLUTION
           </h1>
-          <p className="text-base md:text-lg tracking-tight font-light text-gray-200">
+          <p className="text-base md:text-lg tracking-tighter font-light text-gray-200">
             데이터를 기반으로 ESG를 실행하고, 투명하게 관리합니다.
           </p>
         </div>
 
         {/* 3 Columns (Intro Texts) */}
         <div className="grid grid-cols-3 gap-10 w-full mt-38 items-center">
-          <div className="flex flex-col items-start font-light text-white sm:text-xl md:text-2xl lg:text-3xl text-left">
-            <p className="font-normal">왜 ESG인가?</p>
-            <p className="text-gray-300">실제 설계도 반영</p>
+          <div className="flex flex-col items-start font-light text-white sm:text-lg md:text-xl lg:text-2xl text-left">
+            <p className="font-normal tracking-tighter">왜 ESG인가?</p>
+            <p className="text-gray-300 tracking-tighter">실제 설계도 반영</p>
           </div>
-          <div className="flex flex-col items-center text-white sm:text-xl md:text-2xl lg:text-3xl">
-            <p className="leading-tight font-light mb-2">
+          <div className="flex flex-col items-center text-white sm:text-lg md:text-xl lg:text-2xl">
+            <p className="leading-tighter font-normal mb-2">
               기업의 지속가능성은 데이터로
             </p>
           </div>
-          <div className="flex flex-col items-end text-white sm:text-sm md:text-2xl lg:text-3xl text-right">
-            <p className="mb-2">
+          <div className="flex flex-col items-end font-normal text-white sm:text-lg md:text-xl lg:text-2xl text-right">
+            <p className="mb-2 tracking-tighter">
               실시간 분석 및 공시
               <br /> 자동화로
             </p>
