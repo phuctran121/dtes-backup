@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
+// import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Noto_Sans_KR } from "next/font/google";
+// import { Noto_Sans_KR } from "next/font/google";
 // import localFont from "next/font/local";
+import { Geist, Geist_Mono } from "next/font/google";
 
 // const pretendard = localFont({
 //   src: [
@@ -19,13 +20,23 @@ import { Noto_Sans_KR } from "next/font/google";
 //   preload: true,
 // });
 
-const notoSansKr = Noto_Sans_KR({
+// const notoSansKr = Noto_Sans_KR({
+//   subsets: ["latin"],
+//   weight: ["100", "300", "400", "500", "700", "900"],
+//   variable: "--font-noto-sans-kr",
+//   display: "swap",
+//   // fallback: ["system-ui", "sans-serif"],
+//   // preload: true,
+// });
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-  variable: "--font-noto-sans-kr",
-  display: "swap",
-  // fallback: ["system-ui", "sans-serif"],
-  // preload: true,
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -47,9 +58,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${notoSansKr.className} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <div className="relative z-10">
-          <Navigation />
+          {/* <Navigation /> */}
           <div className="min-h-screen bg-transparent">
             <main className="mx-auto">{children}</main>
           </div>
