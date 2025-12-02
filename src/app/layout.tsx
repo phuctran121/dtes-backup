@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 // import { Noto_Sans_KR } from "next/font/google";
 // import localFont from "next/font/local";
 import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 
 // const notoSansKr = Noto_Sans_KR({
 //   subsets: ["latin"],
@@ -26,19 +26,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const pretendard = localFont({
-  src: [
-    {
-      path: "../fonts/PretendardVariable.woff2",
-      style: "normal",
-      weight: "45 920",
-    },
-  ],
-  variable: "--font-pretendard",
-  display: "swap",
-  fallback: ["system-ui", "sans-serif"],
-  preload: true,
-});
+// const pretendard = localFont({
+//   src: [
+//     {
+//       path: "../fonts/PretendardVariable.woff2",
+//       style: "normal",
+//       weight: "45 920",
+//     },
+//   ],
+//   variable: "--font-pretendard",
+//   display: "swap",
+//   fallback: ["system-ui", "sans-serif"],
+//   preload: true,
+// });
 export const metadata: Metadata = {
   title: "DTES",
   description:
