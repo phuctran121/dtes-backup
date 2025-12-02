@@ -1,11 +1,4 @@
 // import FeaturedSection from "@/components/home/FeaturedSection";
-import HeroSection from "@/components/home/HeroSectionNew";
-import TestPSection from "@/components/home/TestPSection";
-import IntroductionSection from "@/components/home/IntroductionSection";
-import IntroSection from "@/components/home/IntroSection";
-import VideoSection from "@/components/home/VideoSection";
-import HomeSliderSection from "@/components/home/HomeSliderSection";
-// import FeaturedSection from "@/components/home/FeaturedSection";
 import ESGFeaturesSection from "@/components/esgsolution/ESGFeaturesSection";
 import ESGHeaderSection from "@/components/esgsolution/ESGHeaderSection";
 import ESGCasesSection from "@/components/esgsolution/ESGCasesSection";
@@ -25,23 +18,9 @@ export default function Home() {
       {/* <HeroSection /> */}
       <ESGHeaderSection />
       <ESGFeaturesSection />
-      {/* <ESGFlowSection /> */}
-      {/* <IntroductionSection /> */}
-
-      {/* <FeaturedSection /> */}
-
-      {/* <IntroSection />
-
-      <TestPSection />
-
-      <HomeSliderSection />
-
-      <VideoSection /> */}
-
-      {/* Load Data bất đồng bộ + Lazy load JS Swiper */}
-      {/* <FeaturedSection /> */}
-
-      {/* (Optional) Thêm VideoSection ở đây nếu muốn */}
+      <ESGCasesSection data={casesData} />
+      <ESGFlowSection />
+      <ESGResultSection data={resultsData} />
     </main>
   );
 }
