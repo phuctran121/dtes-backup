@@ -1,10 +1,10 @@
 // import FeaturedSection from "@/components/home/FeaturedSection";
 import ESGFeaturesSection from "@/components/esgsolution/ESGFeaturesSection";
 import ESGHeaderSection from "@/components/esgsolution/ESGHeaderSection";
-import ESGCasesSection from "@/components/esgsolution/ESGCasesSection";
-import { casesData, resultsData } from "@/constants/esgSolutionData";
-import ESGResultSection from "@/components/esgsolution/ESGResultSection";
-import ESGFlowSection from "@/components/esgsolution/ESGFlowSection";
+// import ESGCasesSection from "@/components/esgsolution/ESGCasesSection";
+// import { casesData, resultsData } from "@/constants/esgSolutionData";
+// import ESGResultSection from "@/components/esgsolution/ESGResultSection";
+// import ESGFlowSection from "@/components/esgsolution/ESGFlowSection";
 
 // 1. Force Static: Bắt buộc trang này là tĩnh
 
@@ -18,9 +18,9 @@ export default function Home() {
       {/* <HeroSection /> */}
       <ESGHeaderSection />
       <ESGFeaturesSection />
-      <ESGCasesSection data={casesData} />
+      {/* <ESGCasesSection data={casesData} /> */}
       {/* <ESGFlowSection /> */}
-      <ESGResultSection data={resultsData} />
+      {/* <ESGResultSection data={resultsData} /> */}
     </main>
   );
 }
